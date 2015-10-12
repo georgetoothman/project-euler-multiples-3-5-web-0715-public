@@ -1,9 +1,10 @@
-class Solution
+class Multiples
+  attr_reader :array, :new_array
   def initialize
-    @array = [*1..1000]
-    @new_array = Array.new
-    @range_matches = self.find_all_matches(array)
-    @sum_matches = self.sum_all_matches(new_array)
+    @array =          [*1..1000]
+    @new_array =      new_array = Array.new
+    @range_matches =  self.find_all_matches(array)
+    @sum_matches =    self.sum_all_matches(new_array)
   end
 
   def find_all_matches(array)
@@ -22,4 +23,5 @@ class Solution
   def sum_all_matches(new_array)
     new_array.inject{|sum,x| sum + x }
   end
+  test = Multiples.new
 end

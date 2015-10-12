@@ -9,15 +9,19 @@ array = [*1..1000]
 
 new_array = Array.new
 
-array.each do |num|
-  if num % 3 == 0
-    new_array << num
-  elsif num % 5 == 0
-    new_array << num
-  else 
-    nil
+def collect_multiples(array)
+  array.each do |num|
+    if num % 3 == 0
+      new_array << num
+    elsif num % 5 == 0
+      new_array << num
+    else 
+      nil
+    end
+    new_array
   end
-  new_array
 end
 
-sum = new_array.inject{|sum,x| sum + x }
+def sum_multiples(new_array)
+  new_array.inject{|sum,x| sum + x }
+end
